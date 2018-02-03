@@ -7,6 +7,8 @@ function showIssues(json) {
 }
 
 function createIssue() {
+  var title = $('#title').val();
+  var body = $('#body').val();
 }
 
 function showResults(json) {
