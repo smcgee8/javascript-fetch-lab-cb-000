@@ -1,6 +1,11 @@
 require('dotenv').config();
 
 function getIssues() {
+  fetch('https://api.github.com/repos/' + window.owner + '/' + window.repo + '/issues', {
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  }).then(res => res.json()).then(showIssues);
 }
 
 function showIssues(json) {
