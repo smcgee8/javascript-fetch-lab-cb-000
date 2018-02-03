@@ -1,7 +1,5 @@
 # Created by https://www.gitignore.io/api/node
 
-index.js
-
 ### Node ###
 # Logs
 logs
@@ -43,3 +41,5 @@ jspm_packages
 
 # Learn-specific .results.json
 .results.json
+
+.env
