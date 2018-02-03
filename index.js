@@ -9,7 +9,7 @@ function getIssues() {
 }
 
 function showIssues(json) {
-  $('#issues').html(json);
+  $('#issues').html(JSON.stringify(json));
 }
 
 function createIssue() {
