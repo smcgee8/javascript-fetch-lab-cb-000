@@ -10,7 +10,7 @@ function createIssue() {
 }
 
 function showResults(json) {
-  $('#results').append(json.html_url);
+  $('#results').append(`<a href="${json.html_url}">Go to Github</a>`);
 }
 
 function forkRepo() {
