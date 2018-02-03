@@ -21,7 +21,7 @@ function createIssue() {
       Authorization: `token ${getToken()}`
     },
     body: JSON.stringify(postData)
-  })
+  }).then(res => res.json()).then(showIssues);
 }
 
 function showResults(json) {
