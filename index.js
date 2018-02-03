@@ -22,7 +22,7 @@ function createIssue() {
   };
 
   fetch('https://api.github.com/repos/' + window.owner + '/' + window.repo + '/issues', {
-    method: 'POST',
+    method: 'post',
     headers: {
       Authorization: `token ${getToken()}`
     },
@@ -40,7 +40,7 @@ function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
   //use fetch to fork it!
   fetch('https://api.github.com/repos/' + repo + '/forks', {
-    method: 'POST',
+    method: 'post',
     headers: {
       Authorization: `token ${getToken()}`
     }
