@@ -2,6 +2,7 @@ const expect = require('expect')
 const fs = require('fs')
 const jsdom = require('jsdom')
 const path = require('path')
+const jquery = require('jquery')
 
 describe('index', () => {
   before(done => {
