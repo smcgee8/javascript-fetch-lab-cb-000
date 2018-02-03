@@ -10,7 +10,18 @@ function createIssue() {
   var title = $('#title').val();
   var body = $('#body').val();
 
-  fetch('https://api.github.com/repos/')
+  const postData = {
+    title: title,
+    body: body
+  };
+
+  fetch('https://api.github.com/repos/' + window.owner + '/' + window.repo + '/issues', {
+    method: 'POST',
+    headers: {
+      Authorization: `token ${getToken()}`
+    },
+    body: JSON.stringify(postData)
+  })
 }
 
 function showResults(json) {
