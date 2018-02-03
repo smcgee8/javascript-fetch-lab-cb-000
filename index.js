@@ -9,10 +9,14 @@ function showIssues(json) {
 function createIssue() {
   var title = $('#title').val();
   var body = $('#body').val();
+
+  fetch('https://api.github.com/repos/')
 }
 
 function showResults(json) {
   $('#results').append(`<a href="${json.html_url}">Go to Github</a>`);
+  window.owner = json.owner.login;
+  window.repo = json.name;
 }
 
 function forkRepo() {
