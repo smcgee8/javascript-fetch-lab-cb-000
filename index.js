@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 function getIssues() {
-  fetch('https://api.github.com/repos/' + window.owner + '/' + window.repo + '/issues', {
+  fetch('https://api.github.com/repos/smcgee/javascript-fetch-lab/issues', {
     headers: {
       Authorization: `token ${getToken()}`
     }
@@ -21,7 +21,7 @@ function createIssue() {
     body: body
   };
 
-  fetch('https://api.github.com/repos/' + window.owner + '/' + window.repo + '/issues', {
+  fetch('https://api.github.com/repos/smcgee/javascript-fetch-lab/issues', {
     method: 'post',
     headers: {
       Authorization: `token ${getToken()}`
